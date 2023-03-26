@@ -6,10 +6,30 @@ require('dotenv').config();
 const mySecret = process.env['MONGO_URI'];
 mongoose.connect(mySecret, { useNewUrlParser: true });
 
-let Person;
+// ----------------CHALLENGE 2----------------
+const Schema = mongoose.Schema;
+const personSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    age: Number,
+    favoriteFoods: [String]
+});
+const Person = mongoose.model("Person", personSchema);
 
+// ----------------CHALLENGE 3----------------
 const createAndSavePerson = (done) => {
-    done(null /*, data*/);
+    let myName = new Person({
+        name: "Shubham Lal",
+        age: 19,
+        favoriteFoods: ["food1", "food2"]
+    });
+
+    myName.save(function (err, data) {
+        if (err) return console.error(err);
+        done(null, data)
+    });
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
