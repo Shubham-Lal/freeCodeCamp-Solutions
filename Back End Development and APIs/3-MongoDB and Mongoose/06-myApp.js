@@ -1,4 +1,5 @@
 require('dotenv').config();
+const mongoose = require('mongoose');
 
 // ----------------CHALLENGE 1----------------
 // First Sign-in or register to MongoDB
@@ -18,6 +19,7 @@ const personSchema = new Schema({
 });
 const Person = mongoose.model("Person", personSchema);
 
+
 // ----------------CHALLENGE 3----------------
 const createAndSavePerson = (done) => {
     let myName = new Person({
@@ -26,22 +28,46 @@ const createAndSavePerson = (done) => {
         favoriteFoods: ["food1", "food2"]
     });
 
-    myName.save(function (err, data) {
+    myName.save((err, data) => {
         if (err) return console.error(err);
         done(null, data)
     });
 };
 
+// ----------------CHALLENGE 4----------------
+/* What arrayOfPeople can hold
+const arrayOfPeople = [
+  { name: "Shubham", age: 19, favoriteFoods: ["Food 1"] },
+  { name: "Aniket", age: 18, favoriteFoods: ["Food 2"] },
+  { name: "Pratik", age: 21, favoriteFoods: ["Food 3"] }
+];
+*/
+
 const createManyPeople = (arrayOfPeople, done) => {
-    done(null /*, data*/);
+    Person.create(arrayOfPeople, (err, people) => {
+        if (err) return console.log(err);
+        done(null, people);
+    });
 };
 
+// ----------------CHALLENGE 5----------------
 const findPeopleByName = (personName, done) => {
-    done(null /*, data*/);
+    Person.find({
+        name: personName
+    }, (err, people) => {
+        if (err) return console.log(err);
+        done(null, people);
+    });
 };
 
+// ----------------CHALLENGE 6----------------
 const findOneByFood = (food, done) => {
-    done(null /*, data*/);
+    Person.findOne({
+        favoriteFoods: food
+    }, (err, people) => {
+        if (err) return console.log(err);
+        done(null, people);
+    });
 };
 
 const findPersonById = (personId, done) => {
@@ -77,7 +103,7 @@ const queryChain = (done) => {
 };
 
 /** **Well Done !!**
-/* You completed these challenges, let's go celebrate !
+ * You completed these challenges, let's go celebrate !
  */
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------

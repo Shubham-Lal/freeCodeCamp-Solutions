@@ -4,7 +4,7 @@ require('dotenv').config();
 // First Sign-in or register to MongoDB
 // And then follow this tutorial on how to create free cluster - https://www.youtube.com/watch?v=jXgJyuBeb_o
 const mySecret = process.env['MONGO_URI'];
-mongoose.connect(mySecret, { useNewUrlParser: true });
+mongoose.connect(mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let Person;
 

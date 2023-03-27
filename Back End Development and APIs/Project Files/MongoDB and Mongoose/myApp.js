@@ -1,10 +1,11 @@
 require('dotenv').config();
+const mongoose = require('mongoose');
 
 // ----------------CHALLENGE 1----------------
 // First Sign-in or register to MongoDB
 // And then follow this tutorial on how to create free cluster - https://www.youtube.com/watch?v=jXgJyuBeb_o
 const mySecret = process.env['MONGO_URI'];
-mongoose.connect(mySecret, { useNewUrlParser: true });
+mongoose.connect(mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // ----------------CHALLENGE 2----------------
 const Schema = mongoose.Schema;
@@ -17,6 +18,7 @@ const personSchema = new Schema({
   favoriteFoods: [String]
 });
 const Person = mongoose.model("Person", personSchema);
+
 
 // ----------------CHALLENGE 3----------------
 const createAndSavePerson = (done) => {
@@ -58,28 +60,61 @@ const findPeopleByName = (personName, done) => {
   });
 };
 
+// ----------------CHALLENGE 6----------------
 const findOneByFood = (food, done) => {
-  done(null /*, data*/);
+  Person.findOne({
+    favoriteFoods: food
+  }, (err, people) => {
+    if (err) return console.log(err);
+    done(null, people);
+  });
 };
 
+// ----------------CHALLENGE 7----------------
 const findPersonById = (personId, done) => {
-  done(null /*, data*/);
+  Person.findById({
+    _id: personId
+  }, (err, people) => {
+    if (err) return console.log(err);
+    done(null, people);
+  });
 };
 
+// ----------------CHALLENGE 8----------------
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-
-  done(null /*, data*/);
+  Person.findById({
+    _id: personId
+  }, (err, people) => {
+    if (err) return console.log(err);
+    people.favoriteFoods.push(foodToAdd);
+    people.save((err, updatedPerson) => {
+      if (err) return console.log(err);
+      done(null, updatedPerson)
+    });
+  });
 };
 
+// ----------------CHALLENGE 9----------------
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
-
-  done(null /*, data*/);
+  Person.findOneAndUpdate({
+    name: personName
+  }, { age: ageToSet }, { new: true },
+    (err, people) => {
+      if (err) return console.log(err);
+      done(null, people);
+    });
 };
 
+// ----------------CHALLENGE 10----------------
 const removeById = (personId, done) => {
-  done(null /*, data*/);
+  Person.findByIdAndRemove({
+    _id: personId
+  }, (err, people) => {
+    if (err) return console.log(err);
+    done(null, people);
+  });
 };
 
 const removeManyPeople = (done) => {
@@ -95,7 +130,7 @@ const queryChain = (done) => {
 };
 
 /** **Well Done !!**
-/* You completed these challenges, let's go celebrate !
+ * You completed these challenges, let's go celebrate !
  */
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
