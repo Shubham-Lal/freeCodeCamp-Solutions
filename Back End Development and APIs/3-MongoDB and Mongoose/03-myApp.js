@@ -1,12 +1,14 @@
 require('dotenv').config();
 
 // ----------------CHALLENGE 1----------------
+// Install and Set Up Mongoose
 // First Sign-in or register to MongoDB
 // And then follow this tutorial on how to create free cluster - https://www.youtube.com/watch?v=jXgJyuBeb_o
 const mySecret = process.env['MONGO_URI'];
 mongoose.connect(mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // ----------------CHALLENGE 2----------------
+// Create a Model
 const Schema = mongoose.Schema;
 const personSchema = new Schema({
     name: {
@@ -19,6 +21,7 @@ const personSchema = new Schema({
 const Person = mongoose.model("Person", personSchema);
 
 // ----------------CHALLENGE 3----------------
+// Create and Save a Record of a Model
 const createAndSavePerson = (done) => {
     let myName = new Person({
         name: "Shubham Lal",

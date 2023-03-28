@@ -1,12 +1,14 @@
 require('dotenv').config();
 
 // ----------------CHALLENGE 1----------------
+// Install and Set Up Mongoose
 // First Sign-in or register to MongoDB
 // And then follow this tutorial on how to create free cluster - https://www.youtube.com/watch?v=jXgJyuBeb_o
 const mySecret = process.env['MONGO_URI'];
 mongoose.connect(mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // ----------------CHALLENGE 2----------------
+// Create a Model
 const Schema = mongoose.Schema;
 const personSchema = new Schema({
     name: {
