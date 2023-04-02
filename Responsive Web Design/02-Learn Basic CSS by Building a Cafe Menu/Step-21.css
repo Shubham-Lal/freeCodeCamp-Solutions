@@ -1,0 +1,13 @@
+body {
+    background-color: burlywood;
+}
+
+div {
+    width: 300px;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
