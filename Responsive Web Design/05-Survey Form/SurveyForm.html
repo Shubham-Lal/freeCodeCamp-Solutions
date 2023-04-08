@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 id="title">MERN Stack</h1>
+    <p id="description">
+        Suggest why you love working with MERN Stack
+    </p>
+    <form id="survey-form">
+        <label id="name-label">Name
+            <input id="name" type="text" placeholder="Enter your Name" required />
+        </label>
+        <label id="email-label">Email
+            <input id="email" type="email" placeholder="Enter your Email" required />
+        </label>
+        <label id="number-label">Age (optional)
+            <input id="number" type="number" min=1 max=3 placeholder="Age" />
+        </label>
+        <label>Which option best describes your current role?
+            <select id="dropdown">
+                <option>Select current role</option>
+                <option>Student</option>
+                <option>Full Time Job</option>
+                <option>Full Time Learner</option>
+                <option>Prefer not to say</option>
+                <option>Other</option>
+            </select>
+        </label>
+        <label>Would you recommend your friends to use MERN Stack?
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" checked />Definitely
+            </label>
+            <label>
+                <input name="user-recommend" value="maybe" type="radio" />Maybe
+            </label>
+            <label>
+                <input name="user-recommend" value="not-sure" type="radio" />Sure
+            </label>
+        </label>
+        <label>Which of these would you like for frontend devlopment with MongoDB?
+            <label><input value="HTML" type="checkbox" />HTML</label>
+            <label><input value="ReactJS" type="checkbox" />ReactJS</label>
+            <label><input value="NextJS" type="checkbox" />NextJS</label>
+        </label>
+        <label>Any more suggestions?
+            <textarea placeholder="Enter your comment here..."></textarea>
+        </label>
+        <button id="submit" type="submit">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
