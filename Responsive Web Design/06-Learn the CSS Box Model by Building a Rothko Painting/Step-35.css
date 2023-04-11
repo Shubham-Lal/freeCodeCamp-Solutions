@@ -1,0 +1,4 @@
+.one,
+.two {
+    filter: blur(1px);
+}
