@@ -1,0 +1,8 @@
+.large {
+    height: 10px;
+}
+
+.large,
+.medium {
+    background-color: black;
+}
