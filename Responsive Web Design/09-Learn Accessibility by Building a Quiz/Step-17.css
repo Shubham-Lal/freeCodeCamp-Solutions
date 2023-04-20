@@ -1,0 +1,8 @@
+h1,
+h2 {
+    font-family: Verdana, sans-serif;
+}
+
+h2 {
+    border-bottom: 4px solid #dfdfe2;
+}
