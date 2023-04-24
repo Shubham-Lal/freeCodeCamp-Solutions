@@ -1,0 +1,8 @@
+#years {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    background: #0a0a23;
+}
