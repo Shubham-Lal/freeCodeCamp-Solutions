@@ -1,0 +1,3 @@
+tbody th {
+    width: calc(100% - 12rem);
+}
