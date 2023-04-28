@@ -1,0 +1,8 @@
+.key.black--key::after {
+    background-color: #1d1e22;
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+}

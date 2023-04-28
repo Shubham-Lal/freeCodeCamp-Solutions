@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    #piano {
+        width: 358px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .keys {
+        width: 318px;
+    }
+}
