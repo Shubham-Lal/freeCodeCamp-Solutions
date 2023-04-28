@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Declaring_Variables">Declaring Variables</a></li>
+            <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+                JavaScript is a cross-platform, object-oriented scripting language.
+                It is a small and lightweight language. Inside a host environment
+                (for example, a web browser), JavaScript can be connected to the
+                objects of its environment to provide programmatic control over
+                them.
+            </p>
+            <p>
+                JavaScript contains a standard library of objects, such as Array,
+                Date, and Math, and a core set of language elements such as
+                operators, control structures, and statements.
+            </p>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>You use variables as symbolic names for values in your application.
+                The names of variables, called identifiers, conform to certain rules.</p>
+            <p>
+                A JavaScript identifier must start with a letter, underscore (_), or
+                dollar sign ($); subsequent characters can also be digits (0-9).
+                Because JavaScript is case sensitive, letters include the characters
+                "A" through "Z" (uppercase) and the characters "a" through "z"
+                (lowercase).
+            </p>
+        </section>
+        <section class="main-section" id="Declaring_Variables">
+            <header>Declaring Variables</header>
+            <p>
+                With the keyword var. For example, <code>var x = 42.</code> This
+                syntax can be used to declare both local and global variables.
+            </p>
+            <p>
+                By simply assigning it a value. For example,
+                <code>x = 42.</code> This always declares a global variable. It
+                generates a strict JavaScript warning. You shouldn't use this
+                variant.
+            </p>
+        </section>
+        <section class="main-section" id="Variable_Scope">
+            <header>Variable Scope</header>
+            <p>
+                When you declare a variable outside of any function, it is called a
+                global variable, because it is available to any other code in the
+                current document. When you declare a variable within a function, it
+                is called a local variable, because it is available only within that
+                function.
+            </p>
+            <p>
+                JavaScript before ECMAScript 2015 does not have block statement
+                scope; rather, a variable declared within a block is local to the
+                function (or global scope) that the block resides within. For
+                example the following code will log 5, because the scope of x is the
+                function (or global context) within which x is declared, not the
+                block, which in this case is an if statement.
+            </p>
+            <code>if (true) { var x = 5; } console.log(x); // 5</code>
+        </section>
+        <section class="main-section" id="Constants">
+            <header>Constants</header>
+            <p>
+                You can create a read-only, named constant with the const keyword.
+                The syntax of a constant identifier is the same as for a variable
+                identifier: it must start with a letter, underscore or dollar sign
+                and can contain alphabetic, numeric, or underscore characters.
+            </p>
+            <code>const PI = 3.14;</code>
+            <p>
+                A constant cannot change value through assignment or be re-declared
+                while the script is running. It has to be initialized to a value.
+            </p>
+            <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+            WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+            //statements }
+          </code>
+            <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";
+          </code>
+        </section>
+        <section class="main-section" id="Data_types">
+            <header>Data types</header>
+            <p>The latest ECMAScript standard defines seven data types:</p>
+            <ul>
+                <li>
+                    <p>Six data types that are primitives:</p>
+                    <ul>
+                        <li>Boolean. true and false.</li>
+                        <li>
+                            null. A special keyword denoting a null value. Because
+                            JavaScript is case-sensitive, null is not the same as Null,
+                            NULL, or any other variant.
+                        </li>
+                        <li>
+                            undefined. A top-level property whose value is undefined.
+                        </li>
+                        <li>Number. 42 or 3.14159.</li>
+                        <li>String. "Howdy"</li>
+                        <li>
+                            Symbol (new in ECMAScript 2015). A data type whose instances
+                            are unique and immutable.
+                        </li>
+                    </ul>
+                </li>
+
+                <li>and Object</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
