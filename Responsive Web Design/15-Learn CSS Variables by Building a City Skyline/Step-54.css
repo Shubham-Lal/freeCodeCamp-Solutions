@@ -1,0 +1,9 @@
+.bb2a {
+    margin: auto;
+    width: 5vw;
+    height: 5vw;
+    border-top: 1vw solid #000;
+    border-bottom: 1vw solid #000;
+    border-left: 1vw solid #999;
+    border-right: 1vw solid #999;
+}
