@@ -1,0 +1,10 @@
+.fb1 {
+    width: 10%;
+    height: 60%;
+}
+
+.fb1b {
+    width: 60%;
+    height: 10%;
+    background-color: var(--building-color4);
+}
