@@ -1,0 +1,12 @@
+.fb4 {
+    width: 8%;
+    height: 45%;
+    position: relative;
+    left: 10%;
+}
+
+.fb4b {
+    width: 100%;
+    height: 89%;
+    background-color: var(--building-color1);
+}
