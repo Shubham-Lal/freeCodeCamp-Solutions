@@ -1,0 +1,10 @@
+.fb6 {
+    width: 9%;
+    height: 38%;
+    background-color: var(--building-color3);
+    background: repeating-linear-gradient(90deg,
+            var(--building-color3) 0%,
+            var(--building-color3) 10%,
+            transparent 10%,
+            transparent 30%);
+}

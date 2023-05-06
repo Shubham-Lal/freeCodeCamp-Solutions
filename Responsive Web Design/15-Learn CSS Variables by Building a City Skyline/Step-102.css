@@ -1,0 +1,7 @@
+.fb4b {
+    width: 100%;
+    height: 89%;
+    background-color: var(--building-color1);
+    display: flex;
+    flex-wrap: wrap;
+}
