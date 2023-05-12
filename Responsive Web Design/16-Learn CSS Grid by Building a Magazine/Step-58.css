@@ -1,0 +1,4 @@
+.first-paragraph::first-letter {
+    font-size: 6rem;
+    color: orangered;
+}
