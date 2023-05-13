@@ -1,0 +1,4 @@
+.image-1,
+.image-3 {
+    grid-column: 1/-1;
+}
