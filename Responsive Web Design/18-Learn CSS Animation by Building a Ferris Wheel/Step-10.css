@@ -1,0 +1,15 @@
+.line:nth-of-type(3) {
+    transform: rotate(120deg);
+}
+
+.line:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+
+.line:nth-of-type(5) {
+    transform: rotate(240deg);
+}
+
+.line:nth-of-type(6) {
+    transform: rotate(300deg);
+}

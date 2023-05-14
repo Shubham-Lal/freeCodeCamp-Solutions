@@ -1,0 +1,9 @@
+.line {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+}

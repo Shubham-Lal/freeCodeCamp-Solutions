@@ -1,0 +1,8 @@
+.line {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
