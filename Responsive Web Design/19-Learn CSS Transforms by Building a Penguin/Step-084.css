@@ -1,0 +1,9 @@
+.foot.left {
+    left: 25%;
+    rotate: 80deg;
+}
+
+.foot.right {
+    right: 25%;
+    rotate: -80deg;
+}

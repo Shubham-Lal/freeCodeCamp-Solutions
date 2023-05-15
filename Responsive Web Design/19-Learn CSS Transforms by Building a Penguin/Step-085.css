@@ -1,0 +1,8 @@
+.foot {
+    width: 15%;
+    height: 30%;
+    background-color: var(--penguin-picorna);
+    top: 85%;
+    border-radius: 50%;
+    z-index: -1;
+}

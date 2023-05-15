@@ -1,0 +1,4 @@
+.penguin-body::before {
+    content: "";
+    position: absolute;
+}
