@@ -1,0 +1,130 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1b1b32;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0a0a23;
+}
+
+#navbar span {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: white;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#welcome-section {
+    height: calc(100vh + 50px);
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section span {
+    color: white;
+    font-size: 20px;
+}
+
+#welcome-section h1 {
+    font-family: sans-serif;
+    color: #feac32;
+    font-size: 35px;
+}
+
+.projects-header {
+    color: white;
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 2rem;
+}
+
+.project-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+#contact h2 {
+    color: white;
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+}
+
+.btn {
+    color: #feac32;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 610px) {
+    .projects-header {
+        font-size: 30px;
+    }
+
+    #contact h2 {
+        font-size: 30px;
+    }
+}
