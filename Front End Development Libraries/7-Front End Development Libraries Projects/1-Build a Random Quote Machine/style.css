@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    height: 98.3vh;
+    background-color: #0a0a23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#quote-box {
+    background-color: #fff;
+    width: 450px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    display: table;
+    position: relative;
+}
+
+.quote-text {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.quote-text i {
+    font-size: 1.2em;
+    margin-right: 0.2em;
+}
+
+.quote-author {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    text-align: right;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.buttons {
+    margin: auto;
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffbf00;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.button i,
+.buttons button {
+    padding: 8px 18px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: 15px auto 30px auto;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.footer a {
+    color: #fff;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        height: 88vh;
+    }
+}
