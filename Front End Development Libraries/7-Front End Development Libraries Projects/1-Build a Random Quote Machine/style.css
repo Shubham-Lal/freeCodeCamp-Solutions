@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
-    height: 98.3vh;
+    height: 100vh;
     background-color: #0a0a23;
     display: flex;
     align-items: center;
