@@ -85,7 +85,9 @@ const App = () => {
         const audio = document.getElementById(key);
         if (audio) {
             audio.currentTime = 0;
-            audio.play();
+            audio.play().catch((error) => {
+                console.error("Ignore this error: 'Error playing audio'");
+            });
             setSoundName(sound);
         }
     };
