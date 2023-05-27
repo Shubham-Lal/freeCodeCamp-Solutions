@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Share+Tech+Mono&display=swap&font-display=block');
+
+@font-face {
+    font-family: "digitalItalic";
+    src: url("../public/DigitalItalic.ttf");
+}
+
+@font-face {
+    font-family: "digital";
+    src: url("../public/Digital.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    #app {
+        min-height: 88vh;
+    }
+}
+
+.calculator {
+    width: 320px;
+    display: grid;
+    background-color: black;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+        "exp exp exp exp"
+        "io  io  io  io"
+        "ac  ac  .   ."
+        ".   .   .   ."
+        ".   .   .   ."
+        ".   .   .   eq"
+        "n0  n0  .   eq";
+    gap: 1px;
+    padding: 6px;
+    height: 397.5px;
+    border-radius: 5px;
+
+    >div {
+        min-height: var(--size);
+        min-width: var(--size);
+        color: white;
+        --size: 2em;
+        font-size: var(--size);
+
+        &.exp {
+            min-height: 1.2em;
+            font-size: calc(var(--size)*0.6);
+            letter-spacing: 3px;
+            grid-area: exp;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: 'digitalItalic', sans-serif;
+            font-weight: bold;
+            color: orange;
+
+        }
+
+        &.io {
+            min-height: 1.1em;
+            grid-area: io;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: 'digital', sans-serif;
+        }
+
+        &.ac {
+            grid-area: ac;
+            background-color: red;
+        }
+
+        &.eq {
+            grid-area: eq;
+            background-color: darkblue;
+        }
+
+        &.n0 {
+            grid-area: n0;
+        }
+
+        &[class^=n],
+        &.dec {
+            background-color: dimgray;
+        }
+
+        &.d,
+        &.m,
+        &.s,
+        &.a {
+            background-color: gray;
+        }
+
+        >button {
+            min-height: 100%;
+            min-width: 100%;
+            background-color: inherit;
+            font-family: 'Share Tech Mono', sans-serif;
+            font-size: calc(var(--size)*0.4);
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                border: 1px solid white;
+                color: black;
+                scale: 1.05;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    >p {
+        font-family: 'digital', sans-serif;
+        margin: 0;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+
+    >a {
+        font-family: 'digitalItalic', sans-serif;
+        text-decoration: none;
+        margin: 0;
+        font-size: 22px;
+        color: orange;
+        font-weight: lighter;
+
+        &:hover {
+            text-decoration: line-through;
+        }
+    }
+}
