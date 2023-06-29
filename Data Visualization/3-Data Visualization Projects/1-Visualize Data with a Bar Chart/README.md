@@ -2,7 +2,7 @@
 
 ### Certification Project
 
-[Live Site]()
+[Live Site](https://barchart.certified2003.repl.co)
 
 Objective: Build an app that is functionally similar to this: https://bar-chart.freecodecamp.rocks.
 
