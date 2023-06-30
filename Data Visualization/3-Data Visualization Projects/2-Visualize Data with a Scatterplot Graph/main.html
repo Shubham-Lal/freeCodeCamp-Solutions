@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/c/cd/Anti-doping_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doping Graph</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <svg id="canvas">
+        <text id="title" x="150" y="30">
+            Doping in Professional Bicycle Racing
+        </text>
+    </svg>
+
+    <div id="legend">
+        Time(y) vs Year(x)
+        <br />
+        <p><span style="color: red;">Red</span> = Doping Allegation</p>
+        <p><span style="color: green;">Green</span> = No Doping Allegation</p>
+    </div>
+    
+    <div id="tooltip"></div>
+</body>
+<script src='./script.js'></script>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+</html>
