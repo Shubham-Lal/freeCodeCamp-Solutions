@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png"
+        href="https://w7.pngwing.com/pngs/199/566/png-transparent-heat-map-google-search-visualization-google-infographic-orange-canvas-thumbnail.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Map</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 id="title" style="color: white;">
+        Monthly Global Land-Surface Temperature
+    </h1>
+
+    <h4 id="description" style="color: white; text-align: center;">
+        Temperatures from 1753 - 2015
+        <br />
+        Average is 8.66°C
+    </h4>
+
+    <div id="tooltip" style="margin: 10px 0; height: 20px;"></div>
+
+    <svg id="canvas"></svg>
+
+    <svg id="legend">
+        <g>
+            <rect x="10" y="0" width="40" height="40" fill="SteelBlue"></rect>
+            <text x="60" y="20" fill="white">Variance of -1 or less</text>
+        </g>
+        <g>
+            <rect x="10" y="40" width="40" height="40" fill="LightSteelBlue"></rect>
+            <text x="60" y="60" fill="white">On or below Average</text>
+        </g>
+        <g>
+            <rect x="10" y="80" width="40" height="40" fill="Orange"></rect>
+            <text x="60" y="100" fill="white">Above Average</text>
+        </g>
+        <g>
+            <rect x="10" y="120" width="40" height="40" fill="Crimson"></rect>
+            <text x="60" y="140" fill="white">Variance of +1 or more</text>
+        </g>
+    </svg>
+</body>
+<script src='./script.js'></script>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+</html>
