@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png"
+        href="https://datavizcatalogue.com/store/wp-content/uploads/2015/10/choropleth_map.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Map</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 id="title" style="color: white;">
+        USA Education Data
+    </h1>
+
+    <h3 id="description" style="color: white;">
+        Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)
+    </h3>
+
+    <div id="tooltip" style="margin: 10px 0; height: 20px;"></div>
+
+    <svg id="canvas"></svg>
+
+    <svg id="legend">
+        <g>
+            <rect x="10" y="0" width="40" height="40" fill="tomato"></rect>
+            <text x="60" y="20" fill="white">Education ≤ 15%</text>
+        </g>
+        <g>
+            <rect x="10" y="40" width="40" height="40" fill="orange"></rect>
+            <text x="60" y="60" fill="white">15% < Education ≤ 30%</text>
+        </g>
+        <g>
+            <rect x="10" y="80" width="40" height="40" fill="lightgreen"></rect>
+            <text x="60" y="100" fill="white">30% < Education ≤ 45%</text>
+        </g>
+        <g>
+            <rect x="10" y="120" width="40" height="40" fill="darkgreen"></rect>
+            <text x="60" y="140" fill="white">45% < Education </text>
+        </g>
+    </svg>
+</body>
+
+<script src='./script.js'></script>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+</html>
