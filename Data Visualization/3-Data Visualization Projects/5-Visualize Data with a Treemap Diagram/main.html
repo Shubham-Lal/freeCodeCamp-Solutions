@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://datavizproject.com/wp-content/uploads/types/Treemap.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treemap Diagram</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 id="title" style="color: white;">
+        Highest Grossing Movies
+    </h1>
+
+    <h3 id="description" style="color: white; margin-bottom: 20px;">
+        Top 95 Highest Grossing Movies Sorted by Revenue
+    </h3>
+
+    <div style="display: flex;">
+        <svg id="canvas"></svg>
+
+        <svg id="legend">
+            <g>
+                <rect x="10" y="0" width="40" height="40" fill="orange" class="legend-item"></rect>
+                <text x="60" y="20" fill="white">Action</text>
+            </g>
+            <g>
+                <rect x="10" y="40" width="40" height="40" fill="coral" class="legend-item"></rect>
+                <text x="60" y="60" fill="white">Adventure</text>
+            </g>
+            <g>
+                <rect x="10" y="80" width="40" height="40" fill="khaki" class="legend-item"></rect>
+                <text x="60" y="100" fill="white">Comedy</text>
+            </g>
+            <g>
+                <rect x="10" y="120" width="40" height="40" fill="lightgreen" class="legend-item"></rect>
+                <text x="60" y="140" fill="white">Drama</text>
+            </g>
+            <g>
+                <rect x="10" y="160" width="40" height="40" fill="pink" class="legend-item"></rect>
+                <text x="60" y="180" fill="white">Animation</text>
+            </g>
+            <g>
+                <rect x="10" y="200" width="40" height="40" fill="lightblue" class="legend-item"></rect>
+                <text x="60" y="220" fill="white">Family</text>
+            </g>
+            <g>
+                <rect x="10" y="240" width="40" height="40" fill="tan" class="legend-item"></rect>
+                <text x="60" y="260" fill="white">Biography</text>
+            </g>
+        </svg>
+    </div>
+
+    <div id="tooltip" style="height: 20px; margin: 10px 0;"></div>
+</body>
+
+<script src='./script.js'></script>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+</html>
